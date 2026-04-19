@@ -225,16 +225,128 @@ nav {
     transform: scale(1.05);
 }
 
-/* --- SECCIÓN CONTACTO --- */
+/* --- SECCIÓN CONTÁCTANOS PROFESIONAL --- */
 #contacto {
     background-color: var(--deep-cerise);
     color: var(--blanco);
-    text-align: center;
 }
 
-#contacto h2 {
+#contacto .titulo-seccion {
     color: var(--honey-gold);
 }
+
+.contenedor-contacto {
+    max-width: 1100px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+}
+
+/* CAJA IZQUIERDA */
+.info-contacto h3 {
+    color: var(--honey-gold);
+    font-size: 28px;
+}
+
+.info-contacto p {
+    margin-bottom: 20px;
+    line-height: 1.6;
+}
+
+.datos p {
+    font-weight: bold;
+}
+
+.datos strong {
+    color: var(--honey-gold);
+}
+
+/* REDES SOCIALES */
+.info-contacto h4 {
+    margin-top: 30px;
+    margin-bottom: 15px;
+    font-size: 22px;
+    color: var(--lavender-rose);
+}
+
+.redes-sociales {
+    display: flex;
+    gap: 20px;
+}
+
+.redes-sociales img {
+    width: 50px;
+    height: 50px;
+    transition: transform 0.3s;
+}
+
+.redes-sociales img:hover {
+    transform: scale(1.2);
+}
+
+/* FORMULARIO */
+.formulario {
+    background: rgba(255, 255, 255, 0.15);
+    padding: 30px;
+    border-radius: 15px;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255,255,255,0.2);
+}
+
+.campo {
+    margin-bottom: 20px;
+}
+
+.campo label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: var(--honey-gold);
+}
+
+.campo input,
+.campo textarea {
+    width: 100%;
+    padding: 12px 15px;
+    border: none;
+    border-radius: 8px;
+    font-family: 'Poiret One', sans-serif;
+    font-size: 18px;
+    background: rgba(255, 255, 255, 0.9);
+}
+
+.campo input:focus,
+.campo textarea:focus {
+    outline: 3px solid var(--honey-gold);
+}
+
+.boton {
+    width: 100%;
+    padding: 15px;
+    background-color: var(--honey-gold);
+    color: var(--lavender-violet);
+    border: none;
+    border-radius: 8px;
+    font-family: 'Sail', cursive;
+    font-size: 24px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.boton:hover {
+    background-color: var(--blanco);
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
+
+/* RESPONSIVO PARA EL CONTACTO */
+@media (max-width: 768px) {
+    .contenedor-contacto {
+        grid-template-columns: 1fr;
+    }
+}
+
 
 /* --- FOOTER --- */
 footer {

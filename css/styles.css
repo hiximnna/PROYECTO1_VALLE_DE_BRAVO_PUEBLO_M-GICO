@@ -13,7 +13,6 @@ body {
 
 h1, h2, h3 {
     font-family: 'Sail', cursive;
-    color: #7758A3; /* Lavender Violet */
     margin-bottom: 15px;
 }
 
@@ -24,6 +23,8 @@ h1, h2, h3 {
     --honey-gold: #F6C45C;
     --lavender-rose: #FFA5EB;
     --deep-cerise: #DB3E8C;
+    --blanco: #ffffff;
+    --negro-suave: #333333;
 }
 
 /* --- MENÚ DE NAVEGACIÓN --- */
@@ -45,7 +46,7 @@ nav {
 }
 
 .logo h2 {
-    color: white;
+    color: var(--blanco);
     margin: 0;
 }
 
@@ -56,7 +57,7 @@ nav {
 }
 
 .nav-links a {
-    color: white;
+    color: var(--blanco);
     text-decoration: none;
     font-family: 'Poiret One', sans-serif;
     font-weight: bold;
@@ -97,12 +98,12 @@ nav {
     align-items: center;
     justify-content: center;
     text-align: center;
-    color: white;
+    color: var(--blanco);
 }
 
 #inicio h1 {
     font-size: 60px;
-    color: white;
+    color: var(--blanco);
 }
 
 #inicio p {
@@ -111,7 +112,15 @@ nav {
 
 /* --- SECCIÓN INFORMACIÓN --- */
 #info {
-    background-color: #f8f9fa;
+    background-color: var(--blanco);
+}
+
+#info h3 { 
+    color: var(--lavender-violet); 
+}
+
+#info p { 
+    color: var(--negro-suave); 
 }
 
 .imagenes img {
@@ -121,12 +130,16 @@ nav {
     box-shadow: 0 4px 8px rgba(0,0,0,0.1);
 }
 
-/* --- SECCIÓN LUGARES (CON IMAGEN DE FONDO) --- */
+/* --- SECCIÓN LUGARES --- */
 #lugares {
-    background: linear-gradient(rgba(255,255,255,0.85), rgba(255,255,255,0.85)), url('../img/fondo_lugares.jpg');
+    background: linear-gradient(rgba(246, 196, 92, 0.15), rgba(246, 196, 92, 0.15)), url('../img/fondo_lugares.jpg');
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
+}
+
+#lugares h2 { 
+    color: var(--deep-cerise); 
 }
 
 .contenedor-lugares {
@@ -138,12 +151,12 @@ nav {
 }
 
 .tarjeta {
-    background: white;
+    background: var(--blanco);
     padding: 20px;
     border-radius: 10px;
     text-align: center;
     box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-    border-top: 5px solid var(--honey-gold);
+    border-top: 5px solid var(--ruddy-blue);
 }
 
 .tarjeta img {
@@ -154,9 +167,24 @@ nav {
     margin-bottom: 15px;
 }
 
+.tarjeta h3 {
+    color: var(--lavender-violet);
+}
+
 /* --- SECCIÓN GASTRONOMÍA --- */
 #gastronomia {
-    background-color: #fff5fc;
+    background-color: var(--lavender-rose);
+}
+
+#gastronomia h2, 
+#gastronomia h3 { 
+    color: var(--lavender-violet); 
+}
+
+#gastronomia p, 
+#gastronomia li { 
+    color: var(--negro-suave); 
+    font-weight: bold;
 }
 
 #gastronomia ul {
@@ -165,15 +193,15 @@ nav {
     padding-left: 20px;
 }
 
-/* --- SECCIÓN GALERÍA (CON IMAGEN DE FONDO) --- */
+/* --- SECCIÓN GALERÍA --- */
 #galeria {
-    background: linear-gradient(rgba(119, 88, 163, 0.8), rgba(119, 88, 163, 0.8)), url('../img/fondo_galeria.jpg');
+    background: linear-gradient(rgba(102, 165, 237, 0.8), rgba(102, 165, 237, 0.8)), url('../img/fondo_galeria.jpg');
     background-size: cover;
     background-position: center;
 }
 
 #galeria .titulo-seccion {
-    color: white;
+    color: var(--blanco);
 }
 
 .galeria-grid {
@@ -189,7 +217,7 @@ nav {
     height: 200px;
     object-fit: cover;
     border-radius: 8px;
-    border: 3px solid white;
+    border: 3px solid var(--blanco);
     transition: transform 0.3s;
 }
 
@@ -199,8 +227,8 @@ nav {
 
 /* --- SECCIÓN CONTACTO --- */
 #contacto {
-    background-color: var(--lavender-violet);
-    color: white;
+    background-color: var(--deep-cerise);
+    color: var(--blanco);
     text-align: center;
 }
 
@@ -211,7 +239,7 @@ nav {
 /* --- FOOTER --- */
 footer {
     background-color: #5a407a;
-    color: white;
+    color: var(--blanco);
     text-align: center;
     padding: 20px;
     font-size: 16px;

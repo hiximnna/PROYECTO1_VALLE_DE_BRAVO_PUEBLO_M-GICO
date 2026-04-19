@@ -1,4 +1,4 @@
-/* === RESET Y ESTILOS GENERALES === */
+/* RESETEO BÁSICO */
 * {
     margin: 0;
     padding: 0;
@@ -6,125 +6,182 @@
 }
 
 body {
-    font-family: 'Poppins', sans-serif;
-    line-height: 1.6;
+    font-family: 'Poiret One', sans-serif;
+    font-size: 20px;
     color: #333;
-    background-color: #F6F0E4; /* Color crema */
 }
 
 h1, h2, h3 {
-    font-family: 'Playfair Display', serif;
-    color: #6D2932; /* Color vino */
-    margin-bottom: 1rem;
+    font-family: 'Sail', cursive;
+    color: #7758A3; /* Lavender Violet */
+    margin-bottom: 15px;
 }
 
-/* === MENÚ DE NAVEGACIÓN FIJO 📌 === */
-#header {
+/* --- PALETA DE COLORES --- */
+:root {
+    --lavender-violet: #7758A3;
+    --ruddy-blue: #66A5ED;
+    --honey-gold: #F6C45C;
+    --lavender-rose: #FFA5EB;
+    --deep-cerise: #DB3E8C;
+}
+
+/* --- MENÚ DE NAVEGACIÓN --- */
+header {
     width: 100%;
-    position: fixed; /* ¡ESTO HACE QUE SE QUEDE ARRIBA! */
+    background-color: var(--lavender-violet);
+    padding: 15px 0;
+    position: sticky;
     top: 0;
-    left: 0;
     z-index: 100;
-    background-color: rgba(246, 240, 228, 0.95);
-    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
 }
 
-#navbar {
+nav {
     max-width: 1200px;
     margin: auto;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 1rem 2rem;
+}
+
+.logo h2 {
+    color: white;
+    margin: 0;
 }
 
 .nav-links {
     display: flex;
     list-style: none;
-    gap: 1.5rem;
+    gap: 25px;
 }
 
 .nav-links a {
+    color: white;
     text-decoration: none;
-    color: #5F7161; /* Color verde */
-    font-weight: 600;
-    transition: color 0.3s;
+    font-family: 'Poiret One', sans-serif;
+    font-weight: bold;
 }
 
 .nav-links a:hover {
-    color: #6D2932;
+    color: var(--honey-gold);
 }
 
-/* === ESPACIO PARA QUE EL CONTENIDO NO SE OCULTE DETRÁS DEL MENÚ === */
-main {
-    padding-top: 100px; 
-}
-
-/* === SECCIONES === */
+/* --- SECCIONES GENERALES (ANCHO COMPLETO) --- */
 .seccion {
-    max-width: 1200px;
-    margin: 4rem auto;
-    padding: 2rem;
-}
-
-.fondo-claro {
-    background-color: #fff;
-    padding: 4rem 2rem !important;
+    width: 100%;
+    padding: 60px 20px;
 }
 
 .titulo-seccion {
     text-align: center;
-    font-size: 2.5rem;
-    margin-bottom: 3rem;
-    position: relative;
+    font-size: 38px;
+    margin-bottom: 40px;
 }
 
-/* === GRID Y LAYOUT === */
 .contenedor-grid {
+    max-width: 1200px;
+    margin: auto;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 2rem;
+    gap: 40px;
     align-items: center;
+}
+
+/* --- SECCIÓN INICIO --- */
+#inicio {
+    background: linear-gradient(rgba(119, 88, 163, 0.7), rgba(102, 165, 237, 0.7)), url('../img/fondo_inicio.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 90vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+}
+
+#inicio h1 {
+    font-size: 60px;
+    color: white;
+}
+
+#inicio p {
+    font-size: 24px;
+}
+
+/* --- SECCIÓN INFORMACIÓN --- */
+#info {
+    background-color: #f8f9fa;
 }
 
 .imagenes img {
     width: 100%;
-    height: auto;
-    margin-bottom: 1rem;
-    border-radius: 8px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    border-radius: 10px;
+    margin-bottom: 15px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
 }
 
-/* === TARJETAS === */
+/* --- SECCIÓN LUGARES (CON IMAGEN DE FONDO) --- */
+#lugares {
+    background: linear-gradient(rgba(255,255,255,0.85), rgba(255,255,255,0.85)), url('../img/fondo_lugares.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
 .contenedor-lugares {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 2rem;
+    max-width: 1200px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
 }
 
 .tarjeta {
     background: white;
-    width: 300px;
-    padding: 1.5rem;
+    padding: 20px;
     border-radius: 10px;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
     text-align: center;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    border-top: 5px solid var(--honey-gold);
 }
 
 .tarjeta img {
     width: 100%;
-    height: 200px;
+    height: 180px;
     object-fit: cover;
     border-radius: 8px;
-    margin-bottom: 1rem;
+    margin-bottom: 15px;
 }
 
-/* === GALERÍA === */
+/* --- SECCIÓN GASTRONOMÍA --- */
+#gastronomia {
+    background-color: #fff5fc;
+}
+
+#gastronomia ul {
+    margin-top: 15px;
+    list-style: square;
+    padding-left: 20px;
+}
+
+/* --- SECCIÓN GALERÍA (CON IMAGEN DE FONDO) --- */
+#galeria {
+    background: linear-gradient(rgba(119, 88, 163, 0.8), rgba(119, 88, 163, 0.8)), url('../img/fondo_galeria.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+#galeria .titulo-seccion {
+    color: white;
+}
+
 .galeria-grid {
+    max-width: 1200px;
+    margin: auto;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 1rem;
+    gap: 15px;
 }
 
 .galeria-grid img {
@@ -132,6 +189,7 @@ main {
     height: 200px;
     object-fit: cover;
     border-radius: 8px;
+    border: 3px solid white;
     transition: transform 0.3s;
 }
 
@@ -139,43 +197,33 @@ main {
     transform: scale(1.05);
 }
 
-/* === SECCIÓN INICIO === */
-.seccion-inicio {
-    height: 90vh;
-    background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('../img/fondo-inicio.jpg');
-    background-size: cover;
-    background-position: center;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+/* --- SECCIÓN CONTACTO --- */
+#contacto {
+    background-color: var(--lavender-violet);
+    color: white;
     text-align: center;
+}
+
+#contacto h2 {
+    color: var(--honey-gold);
+}
+
+/* --- FOOTER --- */
+footer {
+    background-color: #5a407a;
     color: white;
+    text-align: center;
+    padding: 20px;
+    font-size: 16px;
 }
 
-.contenido-inicio h1 {
-    font-size: 4rem;
-    color: white;
-}
-
-.contenido-inicio span {
-    color: #F6F0E4;
-    border-bottom: 4px solid #6D2932;
-}
-
-/* === RESPONSIVE === */
+/* RESPONSIVO */
 @media (max-width: 768px) {
-    #navbar {
-        flex-direction: column;
-    }
-    .nav-links {
-        margin-top: 1rem;
-        flex-wrap: wrap;
-        justify-content: center;
-    }
     .contenedor-grid {
         grid-template-columns: 1fr;
     }
-    .contenido-inicio h1 {
-        font-size: 2.5rem;
+    .nav-links {
+        gap: 10px;
+        font-size: 16px;
     }
 }

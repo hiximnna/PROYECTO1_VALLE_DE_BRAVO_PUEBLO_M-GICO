@@ -88,27 +88,7 @@ nav {
     align-items: center;
 }
 
-/* 🔥 FILAS (SOLO INFO, NO AFECTA GALERIA) */
-#info .fila {
-    max-width: 1200px;
-    margin: auto;
-    display: flex;
-    align-items: center;
-    gap: 40px; /* ❌ quita los 400px */
-    margin-bottom: 50px;
-}
-
-#info .fila.reverse {
-    flex-direction: row-reverse;
-}
-
-/* 🔥 SOLO IMÁGENES DE INFO */
-#info .fila .imagenes img {
-    width: 100%;
-    max-width: 450px; /* ajusta tamaño */
-    height: 280px;
-    object-fit: cover;
-}
+/* 🔥 NUEVO: FILAS ALTERNADAS */ .fila { max-width: 1200px; margin: auto; display: flex; align-items: center; gap: 400px; margin-bottom: 50px; } .fila.reverse { flex-direction: row-reverse; }
 
 /* --- SECCIÓN INICIO --- */
 #inicio {

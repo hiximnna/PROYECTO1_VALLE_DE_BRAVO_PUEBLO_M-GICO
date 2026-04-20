@@ -1,4 +1,3 @@
-/* RESETEO BÁSICO */
 * {
     margin: 0;
     padding: 0;
@@ -16,7 +15,6 @@ h1, h2, h3 {
     margin-bottom: 15px;
 }
 
-/* --- PALETA DE COLORES --- */
 :root {
     --lavender-violet: #7758A3;
     --ruddy-blue: #66A5ED;
@@ -24,17 +22,15 @@ h1, h2, h3 {
     --lavender-rose: #FFA5EB;
     --deep-cerise: #DB3E8C;
     --blanco: #ffffff;
-    --negro-suave: #333333;
 }
 
-/* --- MENÚ DE NAVEGACIÓN --- */
+/* NAV */
 header {
     width: 100%;
     background-color: var(--lavender-violet);
     padding: 15px 0;
     position: sticky;
     top: 0;
-    z-index: 100;
 }
 
 nav {
@@ -42,370 +38,138 @@ nav {
     margin: auto;
     display: flex;
     justify-content: space-between;
-    align-items: center;
-}
-
-.logo h2 {
-    color: var(--blanco);
-    margin: 0;
 }
 
 .nav-links {
     display: flex;
     list-style: none;
-    gap: 25px;
+    gap: 20px;
 }
 
 .nav-links a {
-    color: var(--blanco);
+    color: white;
     text-decoration: none;
-    font-family: 'Poiret One', sans-serif;
-    font-weight: bold;
 }
 
-.nav-links a:hover {
-    color: var(--honey-gold);
+/* INICIO (ARREGLADO TAMAÑO) */
+#inicio {
+    background: url('../img/fondo_inicio2.jpg') center/cover no-repeat;
+    height: 85vh; /* 🔥 REDUCIDO */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
 }
 
-/* --- SECCIONES GENERALES (ANCHO COMPLETO) --- */
+/* SECCIONES */
 .seccion {
-    width: 100%;
     padding: 60px 20px;
 }
 
 .titulo-seccion {
     text-align: center;
-    font-size: 38px;
+    font-size: 35px;
     margin-bottom: 40px;
 }
 
-.contenedor-grid {
-    max-width: 1200px;
+/* FILAS ALTERNADAS */
+.fila {
+    max-width: 1100px;
     margin: auto;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 40px;
-    align-items: center;
-}
-
-/* --- SECCIÓN INICIO (MEJORADO) --- */
-#inicio {
-    background: url('../img/fondo_inicio2.jpg');
-    background-size: cover;
-    background-position: center top;
-    background-attachment: fixed;
-    height: 100vh;
     display: flex;
     align-items: center;
-    justify-content: center;
-    text-align: center;
-    color: var(--blanco);
-    position: relative;
+    gap: 40px;
+    margin-bottom: 40px;
 }
 
-#inicio::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.3);
-    z-index: 1;
+.fila.reverse {
+    flex-direction: row-reverse;
 }
 
-#inicio .contenido-inicio {
-    position: relative;
-    z-index: 2;
-}
-
-#inicio h1 {
-    font-size: 80px;
-    color: var(--blanco);
-    text-shadow: 3px 3px 8px rgba(0,0,0,0.7);
-    line-height: 1.2;
-}
-
-#inicio p {
-    font-size: 28px;
-    text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
-}
-
-/* --- SECCIÓN INFORMACIÓN (MEJORADO) --- */
-#info {
-    background-color: var(--ruddy-blue);
-    color: var(--blanco);
-}
-
-#info h2 {
-    color: var(--blanco);
-}
-
-#info h3 { 
-    color: var(--honey-gold);
-    font-size: 32px;
-}
-
-#info p { 
-    color: var(--blanco);
-    font-size: 21px;
-    line-height: 1.7;
-    text-align: justify;
-}
-
+/* IMAGENES */
 .imagenes img {
-    width: 85%; /* IMÁGENES MÁS PEQUEÑAS */
+    width: 100%;
+    max-width: 400px;
+    height: 260px;
+    object-fit: cover;
     border-radius: 15px;
-    margin: 15px auto;
-    box-shadow: 0 8px 20px rgba(0,0,0,0.3);
-    display: block;
-    border: 5px solid var(--blanco);
 }
 
-/* --- SECCIÓN LUGARES --- */
-#lugares {
-    background: linear-gradient(rgba(246, 196, 92, 0.15), rgba(246, 196, 92, 0.15)), url('../img/fondo_lugares.jpg');
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
+/* TEXTO */
+.texto {
+    flex: 1;
 }
 
-#lugares h2 { 
-    color: var(--deep-cerise); 
-}
-
+/* LUGARES */
 .contenedor-lugares {
-    max-width: 1200px;
+    max-width: 1100px;
     margin: auto;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 30px;
+    gap: 20px;
 }
 
 .tarjeta {
-    background: var(--blanco);
-    padding: 20px;
+    background: white;
+    padding: 15px;
     border-radius: 10px;
     text-align: center;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-    border-top: 5px solid var(--ruddy-blue);
 }
 
 .tarjeta img {
     width: 100%;
     height: 180px;
     object-fit: cover;
-    border-radius: 8px;
-    margin-bottom: 15px;
 }
 
-.tarjeta h3 {
-    color: var(--lavender-violet);
-}
-
-/* --- SECCIÓN GASTRONOMÍA (MODIFICADA) --- */
+/* GASTRONOMIA */
 #gastronomia {
     background-color: var(--lavender-rose);
 }
 
-#gastronomia h2, 
-#gastronomia h3 { 
-    color: var(--lavender-violet); 
-}
-
-#gastronomia p, 
-#gastronomia li { 
-    color: var(--negro-suave); 
-    font-weight: bold;
-}
-
-#gastronomia ul {
-    margin-top: 15px;
-    list-style: square;
-    padding-left: 20px;
-}
-
-/* NUEVO DISEÑO PARA GASTRONOMIA: TEXTO AL CENTRO, IMÁGENES A LOS LADOS */
 #gastronomia .contenedor-grid {
-    grid-template-columns: 1fr 1.5fr 1fr; /* 3 columnas: img | texto | img */
+    max-width: 1100px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 1fr 1.5fr 1fr;
     gap: 20px;
 }
 
-#gastronomia .imagenes img {
+/* 🔥 MISMO TAMAÑO IMAGENES */
+#gastronomia img {
     width: 100%;
+    height: 250px;
+    object-fit: cover;
     border-radius: 15px;
-    box-shadow: 0 8px 15px rgba(0,0,0,0.2);
-    border: 4px solid var(--blanco);
 }
 
-/* --- SECCIÓN GALERÍA --- */
-#galeria {
-    background: linear-gradient(rgba(102, 165, 237, 0.8), rgba(102, 165, 237, 0.8)), url('../img/fondo_galeria.jpg');
-    background-size: cover;
-    background-position: center;
-}
-
-#galeria .titulo-seccion {
-    color: var(--blanco);
-}
-
+/* GALERIA */
 .galeria-grid {
-    max-width: 1200px;
+    max-width: 1100px;
     margin: auto;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 15px;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 10px;
 }
 
 .galeria-grid img {
     width: 100%;
     height: 200px;
     object-fit: cover;
-    border-radius: 8px;
-    border: 3px solid var(--blanco);
-    transition: transform 0.3s;
 }
 
-.galeria-grid img:hover {
-    transform: scale(1.05);
-}
-
-/* --- SECCIÓN CONTÁCTANOS PROFESIONAL --- */
-#contacto {
-    background-color: var(--deep-cerise);
-    color: var(--blanco);
-}
-
-#contacto .titulo-seccion {
-    color: var(--honey-gold);
-}
-
-.contenedor-contacto {
-    max-width: 1100px;
-    margin: auto;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 50px;
-}
-
-/* CAJA IZQUIERDA */
-.info-contacto h3 {
-    color: var(--honey-gold);
-    font-size: 28px;
-}
-
-.info-contacto p {
-    margin-bottom: 20px;
-    line-height: 1.6;
-}
-
-.datos p {
-    font-weight: bold;
-}
-
-.datos strong {
-    color: var(--honey-gold);
-}
-
-/* REDES SOCIALES */
-.info-contacto h4 {
-    margin-top: 30px;
-    margin-bottom: 15px;
-    font-size: 22px;
-    color: var(--lavender-rose);
-}
-
-.redes-sociales {
-    display: flex;
-    gap: 20px;
-}
-
-.redes-sociales img {
-    width: 50px;
-    height: 50px;
-    transition: transform 0.3s;
-}
-
-.redes-sociales img:hover {
-    transform: scale(1.2);
-}
-
-/* FORMULARIO */
-.formulario {
-    background: rgba(255, 255, 255, 0.15);
-    padding: 30px;
-    border-radius: 15px;
-    backdrop-filter: blur(10px);
-    border: 1px solid rgba(255,255,255,0.2);
-}
-
-.campo {
-    margin-bottom: 20px;
-}
-
-.campo label {
-    display: block;
-    margin-bottom: 8px;
-    font-weight: bold;
-    color: var(--honey-gold);
-}
-
-.campo input,
-.campo textarea {
-    width: 100%;
-    padding: 12px 15px;
-    border: none;
-    border-radius: 8px;
-    font-family: 'Poiret One', sans-serif;
-    font-size: 18px;
-    background: rgba(255, 255, 255, 0.9);
-}
-
-.campo input:focus,
-.campo textarea:focus {
-    outline: 3px solid var(--honey-gold);
-}
-
-.boton {
-    width: 100%;
-    padding: 15px;
-    background-color: var(--honey-gold);
-    color: var(--lavender-violet);
-    border: none;
-    border-radius: 8px;
-    font-family: 'Sail', cursive;
-    font-size: 24px;
-    cursor: pointer;
-    transition: all 0.3s;
-}
-
-.boton:hover {
-    background-color: var(--blanco);
-    transform: translateY(-3px);
-    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
-}
-
-/* --- FOOTER --- */
-footer {
-    background-color: #5a407a;
-    color: var(--blanco);
-    text-align: center;
-    padding: 20px;
-    font-size: 16px;
-}
-
-/* RESPONSIVO */
+/* RESPONSIVE */
 @media (max-width: 768px) {
-    .contenedor-grid,
+    .fila {
+        flex-direction: column;
+    }
+
+    .fila.reverse {
+        flex-direction: column;
+    }
+
     #gastronomia .contenedor-grid {
         grid-template-columns: 1fr;
     }
-    .nav-links {
-        gap: 10px;
-        font-size: 16px;
-    }
-    #inicio h1 {
-        font-size: 50px;
-    }
 }
-

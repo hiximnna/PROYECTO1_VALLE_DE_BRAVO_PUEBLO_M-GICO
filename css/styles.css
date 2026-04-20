@@ -16,18 +16,20 @@ h1, h2, h3 {
     margin-bottom: 15px;
 }
 
-/* --- PALETA DE COLORES --- */
+/* COLORES */
 :root {
     --lavender-violet: #7758A3;
     --ruddy-blue: #66A5ED;
     --honey-gold: #F6C45C;
     --lavender-rose: #FFA5EB;
     --deep-cerise: #DB3E8C;
+    --verde-oscuro: #0d3b2e; /* 🔥 contacto */
+    --verde-medio: #1f5c4d;
     --blanco: #ffffff;
     --negro-suave: #333333;
 }
 
-/* --- MENÚ --- */
+/* NAV */
 header {
     width: 100%;
     background-color: var(--lavender-violet);
@@ -47,7 +49,6 @@ nav {
 
 .logo h2 {
     color: var(--blanco);
-    margin: 0;
 }
 
 .nav-links {
@@ -66,7 +67,7 @@ nav {
     color: var(--honey-gold);
 }
 
-/* --- SECCIONES --- */
+/* SECCIONES */
 .seccion {
     width: 100%;
     padding: 60px 20px;
@@ -78,6 +79,7 @@ nav {
     margin-bottom: 40px;
 }
 
+/* GRID */
 .contenedor-grid {
     max-width: 1200px;
     margin: auto;
@@ -87,7 +89,7 @@ nav {
     align-items: center;
 }
 
-/* 🔥 NUEVO: FILAS ALTERNADAS (INFO) */
+/* 🔥 FILAS INFO */
 .fila {
     max-width: 1200px;
     margin: auto;
@@ -101,13 +103,13 @@ nav {
     flex-direction: row-reverse;
 }
 
-/* --- INICIO --- */
+/* INICIO */
 #inicio {
     background: url('../img/fondo_inicio2.jpg');
     background-size: cover;
-    background-position: center; /* 🔥 CORREGIDO */
+    background-position: center;
     background-attachment: fixed;
-    height: 85vh; /* 🔥 REDUCIDO */
+    height: 85vh;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -137,7 +139,7 @@ nav {
     font-size: 28px;
 }
 
-/* --- INFO --- */
+/* INFO */
 #info {
     background-color: var(--ruddy-blue);
     color: var(--blanco);
@@ -152,7 +154,6 @@ nav {
     text-align: justify;
 }
 
-/* 🔥 IMÁGENES INFO */
 .fila .imagenes img {
     width: 100%;
     max-width: 420px;
@@ -162,7 +163,7 @@ nav {
     border: 5px solid var(--blanco);
 }
 
-/* --- LUGARES --- */
+/* LUGARES */
 #lugares {
     background: linear-gradient(rgba(246,196,92,0.15), rgba(246,196,92,0.15)), url('../img/fondo_lugares.jpg');
     background-size: cover;
@@ -182,25 +183,31 @@ nav {
     padding: 20px;
     border-radius: 10px;
     text-align: center;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    border-top: 5px solid var(--ruddy-blue);
 }
 
 .tarjeta img {
     width: 100%;
     height: 180px;
     object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 15px;
 }
 
-/* --- GASTRONOMIA --- */
+.tarjeta h3 {
+    color: var(--lavender-violet);
+}
+
+/* GASTRONOMIA */
 #gastronomia {
     background-color: var(--lavender-rose);
 }
 
-/* 🔥 GRID 3 COLUMNAS */
 #gastronomia .contenedor-grid {
     grid-template-columns: 1fr 1.5fr 1fr;
 }
 
-/* 🔥 MISMO TAMAÑO IMÁGENES */
 #gastronomia .imagenes img {
     width: 100%;
     height: 260px;
@@ -209,16 +216,22 @@ nav {
     border: 4px solid var(--blanco);
 }
 
-/* --- GALERIA --- */
+/* 🔥 GALERIA RESTAURADA */
 #galeria {
-    background: linear-gradient(rgba(102,165,237,0.8), rgba(102,165,237,0.8)), url('../img/fondo_galeria.jpg');
+    background: linear-gradient(rgba(102, 165, 237, 0.8), rgba(102, 165, 237, 0.8)), url('../img/fondo_galeria.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+#galeria .titulo-seccion {
+    color: var(--blanco);
 }
 
 .galeria-grid {
     max-width: 1200px;
     margin: auto;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 15px;
 }
 
@@ -226,12 +239,23 @@ nav {
     width: 100%;
     height: 200px;
     object-fit: cover;
+    border-radius: 8px;
+    border: 3px solid var(--blanco); /* 🔥 BORDE REGRESA */
+    transition: transform 0.3s;
 }
 
-/* --- CONTACTO --- */
+.galeria-grid img:hover {
+    transform: scale(1.05);
+}
+
+/* 🔥 CONTACTO ORIGINAL VERDE RESTAURADO */
 #contacto {
-    background-color: var(--deep-cerise);
+    background-color: var(--verde-oscuro);
     color: var(--blanco);
+}
+
+#contacto .titulo-seccion {
+    color: var(--honey-gold);
 }
 
 .contenedor-contacto {
@@ -242,27 +266,92 @@ nav {
     gap: 50px;
 }
 
+.info-contacto h3 {
+    color: var(--honey-gold);
+    font-size: 28px;
+}
+
+.info-contacto p {
+    margin-bottom: 20px;
+    line-height: 1.6;
+}
+
+.datos p {
+    font-weight: bold;
+}
+
+.datos strong {
+    color: var(--honey-gold);
+}
+
+/* REDES */
+.info-contacto h4 {
+    margin-top: 30px;
+    margin-bottom: 15px;
+    font-size: 22px;
+    color: var(--lavender-rose);
+}
+
+.redes-sociales {
+    display: flex;
+    gap: 20px;
+}
+
+.redes-sociales img {
+    width: 50px;
+    height: 50px;
+    transition: transform 0.3s;
+}
+
+.redes-sociales img:hover {
+    transform: scale(1.2);
+}
+
+/* FORMULARIO */
 .formulario {
-    background: rgba(255,255,255,0.15);
+    background: rgba(255, 255, 255, 0.1);
     padding: 30px;
     border-radius: 15px;
+}
+
+.campo {
+    margin-bottom: 20px;
+}
+
+.campo label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: var(--honey-gold);
 }
 
 .campo input,
 .campo textarea {
     width: 100%;
-    padding: 10px;
+    padding: 12px;
+    border-radius: 8px;
+    border: none;
 }
 
-/* --- FOOTER --- */
+.boton {
+    width: 100%;
+    padding: 15px;
+    background-color: var(--honey-gold);
+    border: none;
+    border-radius: 8px;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+/* FOOTER */
 footer {
     background-color: #5a407a;
-    color: white;
+    color: var(--blanco);
     text-align: center;
     padding: 20px;
 }
 
-/* --- RESPONSIVE --- */
+/* RESPONSIVE */
 @media (max-width: 768px) {
 
     .contenedor-grid,

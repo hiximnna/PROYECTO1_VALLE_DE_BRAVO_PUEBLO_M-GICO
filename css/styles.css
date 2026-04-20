@@ -16,18 +16,18 @@ h1, h2, h3 {
     margin-bottom: 15px;
 }
 
-/* COLORES */
+/* --- PALETA DE COLORES --- */
 :root {
     --lavender-violet: #7758A3;
     --ruddy-blue: #66A5ED;
     --honey-gold: #F6C45C;
-    --lavender-rose: #FFA5EB; /* 💗 TU ROSA */
-    --deep-cerise: #DB3E8C;   /* 💗 ROSA FUERTE */
+    --lavender-rose: #FFA5EB;
+    --deep-cerise: #DB3E8C;
     --blanco: #ffffff;
     --negro-suave: #333333;
 }
 
-/* NAV */
+/* --- MENÚ DE NAVEGACIÓN --- */
 header {
     width: 100%;
     background-color: var(--lavender-violet);
@@ -47,6 +47,7 @@ nav {
 
 .logo h2 {
     color: var(--blanco);
+    margin: 0;
 }
 
 .nav-links {
@@ -58,6 +59,7 @@ nav {
 .nav-links a {
     color: var(--blanco);
     text-decoration: none;
+    font-family: 'Poiret One', sans-serif;
     font-weight: bold;
 }
 
@@ -65,7 +67,7 @@ nav {
     color: var(--honey-gold);
 }
 
-/* SECCIONES */
+/* --- SECCIONES GENERALES --- */
 .seccion {
     width: 100%;
     padding: 60px 20px;
@@ -77,7 +79,6 @@ nav {
     margin-bottom: 40px;
 }
 
-/* GRID */
 .contenedor-grid {
     max-width: 1200px;
     margin: auto;
@@ -87,7 +88,7 @@ nav {
     align-items: center;
 }
 
-/* 🔥 FILAS INFO */
+/* 🔥 NUEVO: FILAS ALTERNADAS */
 .fila {
     max-width: 1200px;
     margin: auto;
@@ -101,7 +102,7 @@ nav {
     flex-direction: row-reverse;
 }
 
-/* INICIO */
+/* --- SECCIÓN INICIO --- */
 #inicio {
     background: url('../img/fondo_inicio2.jpg');
     background-size: cover;
@@ -119,9 +120,12 @@ nav {
 #inicio::before {
     content: '';
     position: absolute;
+    top: 0;
+    left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0,0,0,0.3);
+    background-color: rgba(0, 0, 0, 0.3);
+    z-index: 1;
 }
 
 #inicio .contenido-inicio {
@@ -137,21 +141,23 @@ nav {
     font-size: 28px;
 }
 
-/* INFO */
+/* --- SECCIÓN INFO --- */
 #info {
     background-color: var(--ruddy-blue);
     color: var(--blanco);
 }
 
-#info h3 {
+#info h3 { 
     color: var(--honey-gold);
 }
 
-#info p {
+#info p { 
+    font-size: 21px;
     line-height: 1.7;
     text-align: justify;
 }
 
+/* 🔥 IMÁGENES INFO */
 .fila .imagenes img {
     width: 100%;
     max-width: 420px;
@@ -161,11 +167,16 @@ nav {
     border: 5px solid var(--blanco);
 }
 
-/* LUGARES */
+/* --- SECCIÓN LUGARES --- */
 #lugares {
-    background: linear-gradient(rgba(246,196,92,0.15), rgba(246,196,92,0.15)), url('../img/fondo_lugares.jpg');
+    background: linear-gradient(rgba(246, 196, 92, 0.15), rgba(246, 196, 92, 0.15)), url('../img/fondo_lugares.jpg');
     background-size: cover;
+    background-position: center;
     background-attachment: fixed;
+}
+
+#lugares h2 { 
+    color: var(--deep-cerise); 
 }
 
 .contenedor-lugares {
@@ -197,9 +208,26 @@ nav {
     color: var(--lavender-violet);
 }
 
-/* GASTRONOMIA */
+/* --- SECCIÓN GASTRONOMÍA --- */
 #gastronomia {
     background-color: var(--lavender-rose);
+}
+
+#gastronomia h2, 
+#gastronomia h3 { 
+    color: var(--lavender-violet); 
+}
+
+#gastronomia p, 
+#gastronomia li { 
+    color: var(--negro-suave); 
+    font-weight: bold;
+}
+
+#gastronomia ul {
+    margin-top: 15px;
+    list-style: square;
+    padding-left: 20px;
 }
 
 #gastronomia .contenedor-grid {
@@ -214,16 +242,22 @@ nav {
     border: 4px solid var(--blanco);
 }
 
-/* GALERIA (CON BORDES) */
+/* --- SECCIÓN GALERÍA (CON BORDES) --- */
 #galeria {
-    background: linear-gradient(rgba(102,165,237,0.8), rgba(102,165,237,0.8)), url('../img/fondo_galeria.jpg');
+    background: linear-gradient(rgba(102, 165, 237, 0.8), rgba(102, 165, 237, 0.8)), url('../img/fondo_galeria.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+#galeria .titulo-seccion {
+    color: var(--blanco);
 }
 
 .galeria-grid {
     max-width: 1200px;
     margin: auto;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 15px;
 }
 
@@ -232,12 +266,17 @@ nav {
     height: 200px;
     object-fit: cover;
     border-radius: 8px;
-    border: 3px solid var(--blanco); /* 💥 REGRESA */
+    border: 3px solid var(--blanco); /* 🔥 BORDE */
+    transition: transform 0.3s;
 }
 
-/* 💗 CONTACTO ROSA ORIGINAL */
+.galeria-grid img:hover {
+    transform: scale(1.05);
+}
+
+/* --- SECCIÓN CONTACTO ORIGINAL ROSA --- */
 #contacto {
-    background-color: var(--deep-cerise); /* 💗 */
+    background-color: var(--deep-cerise); /* 💗 ROSA */
     color: var(--blanco);
 }
 
@@ -253,16 +292,32 @@ nav {
     gap: 50px;
 }
 
-/* TEXTO */
 .info-contacto h3 {
     color: var(--honey-gold);
+    font-size: 28px;
 }
 
 .info-contacto p {
     margin-bottom: 20px;
+    line-height: 1.6;
 }
 
-/* REDES (ICONOS) */
+.datos p {
+    font-weight: bold;
+}
+
+.datos strong {
+    color: var(--honey-gold);
+}
+
+/* 🔥 ICONOS REDES RESTAURADOS */
+.info-contacto h4 {
+    margin-top: 30px;
+    margin-bottom: 15px;
+    font-size: 22px;
+    color: var(--lavender-rose);
+}
+
 .redes-sociales {
     display: flex;
     gap: 20px;
@@ -278,11 +333,22 @@ nav {
     transform: scale(1.2);
 }
 
-/* FORM */
+/* FORMULARIO */
 .formulario {
-    background: rgba(255,255,255,0.15);
+    background: rgba(255, 255, 255, 0.15);
     padding: 30px;
     border-radius: 15px;
+}
+
+.campo {
+    margin-bottom: 20px;
+}
+
+.campo label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: var(--honey-gold);
 }
 
 .campo input,
@@ -293,12 +359,20 @@ nav {
     border: none;
 }
 
+/* BOTÓN */
 .boton {
     width: 100%;
     padding: 15px;
     background-color: var(--honey-gold);
+    color: var(--lavender-violet);
     border: none;
     border-radius: 8px;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.boton:hover {
+    background-color: var(--blanco);
 }
 
 /* FOOTER */
@@ -311,7 +385,6 @@ footer {
 
 /* RESPONSIVE */
 @media (max-width: 768px) {
-
     .contenedor-grid,
     #gastronomia .contenedor-grid {
         grid-template-columns: 1fr;

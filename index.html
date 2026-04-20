@@ -5,196 +5,185 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Valle de Bravo - Pueblo Mágico</title>
     
-    <!-- AQUÍ LLAMAMOS A LA HOJA DE ESTILOS -->
     <link rel="stylesheet" href="css/styles.css">
 
-    <!-- FUENTES DE GOOGLE -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Sail&family=Poiret+One&display=swap" rel="stylesheet">
 </head>
 <body>
 
-    <!-- MENÚ DE NAVEGACIÓN -->
-    <header>
-        <nav>
-            <div class="logo">
-                <h2>Valle de Bravo</h2>
-            </div>
-            <ul class="nav-links">
-                <li><a href="#inicio">Inicio</a></li>
-                <li><a href="#info">Información</a></li>
-                <li><a href="#lugares">Lugares</a></li>
-                <li><a href="#gastronomia">Gastronomía</a></li>
-                <li><a href="#galeria">Galería</a></li>
-                <li><a href="#contacto">Contacto</a></li>
+<header>
+    <nav>
+        <div class="logo">
+            <h2>Valle de Bravo</h2>
+        </div>
+        <ul class="nav-links">
+            <li><a href="#inicio">Inicio</a></li>
+            <li><a href="#info">Información</a></li>
+            <li><a href="#lugares">Lugares</a></li>
+            <li><a href="#gastronomia">Gastronomía</a></li>
+            <li><a href="#galeria">Galería</a></li>
+            <li><a href="#contacto">Contacto</a></li>
+        </ul>
+    </nav>
+</header>
+
+<main>
+
+<!-- INICIO -->
+<section id="inicio">
+    <div class="contenido-inicio">
+        <h1>Bienvenidos a <br><span>Valle de Bravo</span></h1>
+        <p>Descubre la magia, historia y belleza de este increíble Pueblo Mágico.</p>
+    </div>
+</section>
+
+<!-- INFORMACIÓN -->
+<section id="info" class="seccion">
+    <h2 class="titulo-seccion">Información General</h2>
+
+    <!-- BLOQUE 1 -->
+    <div class="fila">
+        <div class="imagenes">
+            <img src="img/imagen1.jpg" alt="">
+        </div>
+        <article class="texto">
+            <h3>Historia y encanto</h3>
+            <p>Valle de Bravo, nombrado <strong>Pueblo Mágico en 2005</strong>, se ubica en el corazón del Estado de México. Su origen se remonta a comunidades indígenas mazahuas que dejaron una gran herencia cultural.</p>
+            <p>Hoy en día, conserva su arquitectura colonial, calles empedradas y un ambiente tranquilo que lo convierten en un destino ideal para descansar y disfrutar de la naturaleza.</p>
+        </article>
+    </div>
+
+    <!-- BLOQUE 2 -->
+    <div class="fila reverse">
+        <article class="texto">
+            <h3>Atractivos naturales</h3>
+            <p>El <strong>Lago Avándaro</strong> es uno de sus mayores atractivos turísticos, perfecto para realizar actividades como paseos en lancha, kayak o deportes acuáticos.</p>
+            <p>Además, el entorno natural que rodea al pueblo ofrece paisajes espectaculares, bosques y miradores que invitan a la aventura y la relajación.</p>
+        </article>
+        <div class="imagenes">
+            <img src="img/imagen2.jpg" alt="">
+        </div>
+    </div>
+
+</section>
+
+<!-- LUGARES -->
+<section id="lugares" class="seccion">
+    <h2 class="titulo-seccion">Lugares que no te puedes perder</h2>
+
+    <div class="contenedor-lugares">
+
+        <div class="tarjeta">
+            <img src="img/lugar1.jpg" alt="">
+            <h3>La Peña</h3>
+            <p>Uno de los miradores más impresionantes de Valle de Bravo. Desde la cima puedes observar el lago y gran parte del pueblo. Es ideal para practicar senderismo y tomar fotografías panorámicas.</p>
+        </div>
+
+        <div class="tarjeta">
+            <img src="img/lugar2.jpg" alt="">
+            <h3>Cascadas de Avándaro</h3>
+            <p>Un hermoso lugar rodeado de bosque donde podrás disfrutar del sonido del agua y la naturaleza. Perfecto para relajarte, caminar y desconectarte del estrés de la ciudad.</p>
+        </div>
+
+        <div class="tarjeta">
+            <img src="img/lugar3.jpg" alt="">
+            <h3>Cruz de Misión</h3>
+            <p>Un sitio histórico con vistas espectaculares del pueblo. Es ideal para aprender sobre la historia local mientras disfrutas de un paisaje único y tranquilo.</p>
+        </div>
+
+    </div>
+</section>
+
+<!-- GASTRONOMÍA -->
+<section id="gastronomia" class="seccion">
+    <h2 class="titulo-seccion">Gastronomía y Cultura</h2>
+
+    <div class="contenedor-grid">
+
+        <!-- IMAGEN IZQUIERDA -->
+        <div class="imagenes">
+            <img src="img/comida1.1.jpg" alt="">
+        </div>
+
+        <!-- TEXTO -->
+        <article class="texto">
+            <h3>Sabores auténticos</h3>
+            <p>La gastronomía de Valle de Bravo es una mezcla de tradición y sabor. Aquí podrás disfrutar de una gran variedad de platillos típicos preparados con ingredientes frescos de la región.</p>
+            <ul>
+                <li>Trucha fresca preparada de distintas formas</li>
+                <li>Quesadillas, sopes y antojitos mexicanos</li>
+                <li>Dulces tradicionales y postres artesanales</li>
             </ul>
-        </nav>
-    </header>
+            <p>Muchos restaurantes ofrecen vistas al lago, haciendo de cada comida una experiencia inolvidable.</p>
+        </article>
 
-    <main>
+        <!-- IMAGEN DERECHA -->
+        <div class="imagenes">
+            <img src="img/comida2.2.jpg" alt="">
+        </div>
 
-        <!-- SECCIÓN INICIO (MEJORADA) -->
-        <section id="inicio">
-            <div class="contenido-inicio">
-                <h1>Bienvenidos a <br><span>Valle de Bravo</span></h1>
-                <p>Descubre la magia, historia y belleza de este increíble Pueblo Mágico.</p>
+    </div>
+</section>
+
+<!-- GALERÍA -->
+<section id="galeria" class="seccion">
+    <h2 class="titulo-seccion">Galería de Fotos</h2>
+    <div class="galeria-grid">
+        <img src="img/foto1.jpg">
+        <img src="img/foto2.jpg">
+        <img src="img/foto3.jpg">
+        <img src="img/foto4.jpg">
+        <img src="img/foto5.jpg">
+        <img src="img/foto6.jpg">
+        <img src="img/foto7.jpg">
+        <img src="img/foto8.jpg">
+    </div>
+</section>
+
+<!-- CONTACTO -->
+<section id="contacto" class="seccion">
+    <h2 class="titulo-seccion">Contáctanos</h2>
+
+    <div class="contenedor-contacto">
+        
+        <div class="info-contacto">
+            <h3>¡Escríbenos!</h3>
+            <p>Estamos aquí para ayudarte.</p>
+
+            <div class="datos">
+                <p><strong>📍 Ubicación:</strong> Valle de Bravo</p>
+                <p><strong>📞 Teléfono:</strong> +52 726 123 4567</p>
+                <p><strong>✉️ Email:</strong> info@valledebravo.com</p>
             </div>
-        </section>
+        </div>
 
-        <!-- SECCIÓN INFORMACIÓN (MEJORADA) -->
-        <section id="info" class="seccion">
-            <h2 class="titulo-seccion">Información General</h2>
-            <div class="contenedor-grid">
-                <article class="texto">
-                    <h3>Conoce su historia y encanto</h3>
-                    <p>Valle de Bravo, nombrado <strong>Pueblo Mágico en 2005</strong>, se encuentra en el corazón del Estado de México. Originalmente habitado por grupos indígenas mazahuas, hoy es famoso mundialmente por su impresionante <strong>Lago Avándaro</strong> y su clima fresco y agradable durante todo el año.</p>
-                    <p>Es un lugar lleno de tradición, cultura, arquitectura colonial y paisajes naturales que te enamorarán desde el primer momento. Ideal para descansar, practicar deportes o simplemente disfrutar de su gastronomía.</p>
-                </article>
-                 <article class="texto">
-                    <h3>Conoce su historia y encanto</h3>
-                    <p>Valle de Bravo, nombrado <strong>Pueblo Mágico en 2005</strong>, se encuentra en el corazón del Estado de México. Originalmente habitado por grupos indígenas mazahuas, hoy es famoso mundialmente por su impresionante <strong>Lago Avándaro</strong> y su clima fresco y agradable durante todo el año.</p>
-                    <p>Es un lugar lleno de tradición, cultura, arquitectura colonial y paisajes naturales que te enamorarán desde el primer momento. Ideal para descansar, practicar deportes o simplemente disfrutar de su gastronomía.</p>
-                </article>
-                <div class="imagenes">
-                    <img src="img/imagen1.jpg" alt="Vista del lugar">
-                    <img src="img/imagen2.jpg" alt="Detalle del lugar">
-                </div>
+        <form class="formulario">
+            <div class="campo">
+                <label>Nombre</label>
+                <input type="text">
             </div>
-        </section>
 
-        <!-- SECCIÓN LUGARES -->
-        <section id="lugares" class="seccion">
-            <h2 class="titulo-seccion">Lugares que no te puedes perder</h2>
-            <div class="contenedor-lugares">
-                
-                <div class="tarjeta">
-                    <img src="img/lugar1.jpg" alt="La Peña">
-                    <h3>La Peña</h3>
-                    <p>Un mirador impresionante con vistas panorámicas del lago y el pueblo.</p>
-                </div>
-
-                <div class="tarjeta">
-                    <img src="img/lugar2.jpg" alt="Cascadas de Avándaro">
-                    <h3>Cascadas de Avándaro</h3>
-                    <p>Un lugar perfecto para conectar con la naturaleza y disfrutar del agua.</p>
-                </div>
-
-                <div class="tarjeta">
-                    <img src="img/lugar3.jpg" alt="Cruz de Misión">
-                    <h3>Cruz de Misión</h3>
-                    <p>Un sitio histórico con una de las mejores vistas de Valle de Bravo.</p>
-                </div>
-
+            <div class="campo">
+                <label>Email</label>
+                <input type="email">
             </div>
-        </section>
 
-        <!-- SECCIÓN GASTRONOMÍA (MODIFICADA: IMG - TEXTO - IMG) -->
-        <section id="gastronomia" class="seccion">
-            <h2 class="titulo-seccion">Gastronomía y Cultura</h2>
-            <div class="contenedor-grid">
-                
-                <!-- IMAGEN IZQUIERDA -->
-                <div class="imagenes">
-                    <img src="img/comida1.1.jpg" alt="Platillo típico">
-                </div>
-
-                <!-- TEXTO AL CENTRO -->
-                <article class="texto">
-                    <h3>Sabores auténticos</h3>
-                    <p>La comida es una parte fundamental de la visita. No te vayas sin probar:</p>
-                    <ul>
-                        <li>Trucha preparada de distintas formas</li>
-                        <li>Quesadillas y antojitos mexicanos</li>
-                        <li>Dulces tradicionales y postres artesanales</li>
-                    </ul>
-                </article>
-
-                <!-- IMAGEN DERECHA -->
-                <div class="imagenes">
-                    <img src="img/comida2.2.jpg" alt="Bebida tradicional">
-                </div>
-
+            <div class="campo">
+                <label>Mensaje</label>
+                <textarea rows="5"></textarea>
             </div>
-        </section>
 
-        <!-- SECCIÓN GALERÍA (CON 8 IMÁGENES) -->
-        <section id="galeria" class="seccion">
-            <h2 class="titulo-seccion">Galería de Fotos</h2>
-            <div class="galeria-grid">
-                <img src="img/foto1.jpg" alt="Vista panorámica">
-                <img src="img/foto2.jpg" alt="Arquitectura">
-                <img src="img/foto3.jpg" alt="Naturaleza">
-                <img src="img/foto4.jpg" alt="Tradiciones">
-                <img src="img/foto5.jpg" alt="Atardecer">
-                <img src="img/foto6.jpg" alt="Artesanías">
-                <img src="img/foto7.jpg" alt="Actividades">
-                <img src="img/foto8.jpg" alt="Paisajes">
-            </div>
-        </section>
+            <button class="boton">Enviar</button>
+        </form>
 
-        <!-- SECCIÓN CONTÁCTANOS -->
-        <section id="contacto" class="seccion">
-            <h2 class="titulo-seccion">Contáctanos</h2>
-            
-            <div class="contenedor-contacto">
-                
-                <!-- CAJA IZQUIERDA: INFORMACIÓN -->
-                <div class="info-contacto">
-                    <h3>¡Escríbenos!</h3>
-                    <p>Estamos aquí para ayudarte y resolver todas tus dudas sobre este hermoso destino.</p>
+    </div>
+</section>
 
-                    <div class="datos">
-                        <p><strong>📍 Ubicación:</strong> Valle de Bravo, Estado de México</p>
-                        <p><strong>📞 Teléfono:</strong> +52 726 123 4567</p>
-                        <p><strong>✉️ Email:</strong> info@valledebravo.com</p>
-                    </div>
+</main>
 
-                    <h4>Síguenos en redes sociales</h4>
-                    <div class="redes-sociales">
-                        <a href="#" target="_blank">
-                            <img src="img/logo_facebook.jpg" alt="Facebook">
-                        </a>
-                        <a href="#" target="_blank">
-                            <img src="img/logo_instagram.jpg" alt="Instagram">
-                        </a>
-                        <a href="#" target="_blank">
-                            <img src="img/logo_whatsaap.jpg" alt="WhatsApp">
-                        </a>
-                    </div>
-                </div>
-
-                <!-- CAJA DERECHA: FORMULARIO -->
-                <form class="formulario">
-                    <div class="campo">
-                        <label for="nombre">Nombre completo</label>
-                        <input type="text" id="nombre" placeholder="Tu nombre">
-                    </div>
-
-                    <div class="campo">
-                        <label for="email">Correo Electrónico</label>
-                        <input type="email" id="email" placeholder="tu@email.com">
-                    </div>
-
-                    <div class="campo">
-                        <label for="mensaje">Tu opinión o mensaje</label>
-                        <textarea id="mensaje" rows="5" placeholder="Escribe aquí tu mensaje..."></textarea>
-                    </div>
-
-                    <button type="submit" class="boton">Enviar Mensaje</button>
-                </form>
-
-            </div>
-        </section>
-
-    </main>
-
-    <footer>
-        <p>Valle de bravo | Dulce Ximena Luis Garcia</p>
-    </footer>
+<footer>
+    <p>Valle de Bravo | Dulce Ximena Luis Garcia</p>
+</footer>
 
 </body>
 </html>
-
-
-

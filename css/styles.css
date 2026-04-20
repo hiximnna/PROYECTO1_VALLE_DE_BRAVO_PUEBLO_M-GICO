@@ -275,10 +275,133 @@ nav {
     transform: scale(1.05);
 }
 
-/* --- CONTACTO --- */
+/* --- SECCIÓN CONTACTO --- */
 #contacto {
-    background-color: var(--deep-cerise);
+    background-color: var(--dark-green);
     color: var(--blanco);
 }
 
-/* (todo lo demás igual, NO tocado) */
+#contacto .titulo-seccion {
+    color: var(--beige);
+}
+
+.contenedor-contacto {
+    max-width: 1100px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+}
+
+.info-contacto h3 {
+    color: var(--rosy-brown);
+    font-size: 28px;
+}
+
+.info-contacto p {
+    margin-bottom: 20px;
+    line-height: 1.6;
+}
+
+.datos strong {
+    color: var(--rosy-brown);
+}
+
+.info-contacto h4 {
+    margin-top: 30px;
+    margin-bottom: 15px;
+    font-size: 22px;
+    color: var(--moss-green);
+}
+
+.redes-sociales {
+    display: flex;
+    gap: 20px;
+}
+
+.redes-sociales img {
+    width: 50px;
+    height: 50px;
+    transition: transform 0.3s;
+}
+
+.redes-sociales img:hover {
+    transform: scale(1.2);
+}
+
+/* FORMULARIO */
+
+.formulario {
+    background: rgba(255,255,255,0.1);
+    padding: 30px;
+    border-radius: 15px;
+}
+
+.campo {
+    margin-bottom: 20px;
+}
+
+.campo label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: var(--beige);
+}
+
+.campo input,
+.campo textarea {
+    width: 100%;
+    padding: 12px 15px;
+    border: none;
+    border-radius: 8px;
+    font-family: 'Poiret One', sans-serif;
+    font-size: 18px;
+}
+
+.boton {
+    width: 100%;
+    padding: 15px;
+    background-color: var(--rosy-brown);
+    color: var(--blanco);
+    border: none;
+    border-radius: 8px;
+    font-family: 'Sail', cursive;
+    font-size: 24px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.boton:hover {
+    background-color: var(--beige);
+    color: var(--dark-green);
+}
+
+/* --- FOOTER --- */
+
+footer {
+    background-color: var(--midnight-green);
+    color: var(--blanco);
+    text-align: center;
+    padding: 20px;
+    font-size: 16px;
+}
+
+/* RESPONSIVO */
+
+@media (max-width: 768px) {
+
+    .contenedor-grid,
+    #gastronomia .contenedor-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .nav-links {
+        gap: 10px;
+        font-size: 16px;
+    }
+
+    #inicio h1 {
+        font-size: 45px;
+    }
+
+}

@@ -84,7 +84,7 @@ nav {
     margin: auto;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 40px;
+    gap: 400px;
     align-items: center;
 }
 
@@ -94,7 +94,7 @@ nav {
     margin: auto;
     display: flex;
     align-items: center;
-    gap: 40px;
+    gap: 400px;
     margin-bottom: 50px;
 }
 
